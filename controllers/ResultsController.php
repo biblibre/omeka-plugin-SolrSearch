@@ -152,7 +152,7 @@ class SolrSearch_ResultsController
         // Get a list of active facets.
         $facets = $this->_fields->getActiveFacetKeys();
 
-        return array(
+        $parameters = array(
 
             'facet'               => 'true',
             'facet.field'         => $facets,
@@ -167,6 +167,12 @@ class SolrSearch_ResultsController
 
         );
 
+        $df = $this->_request->getParam('df');
+        if (isset($df)) {
+            $parameters['df'] = $df;
+        }
+
+        return $parameters;
     }
 
 
