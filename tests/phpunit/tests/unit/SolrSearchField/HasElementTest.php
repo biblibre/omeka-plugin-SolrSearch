@@ -22,7 +22,7 @@ class SolrSearchFieldTest_HasElement extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $facet = new SolrSearchField($title);
+        $facet = new SolrSearchField(null, $title);
 
         // True when a parent element exists.
         $this->assertTrue($facet->hasElement());

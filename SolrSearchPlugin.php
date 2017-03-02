@@ -94,6 +94,27 @@ SQL
         if (version_compare($args['old_version'], '2.2.1', '<=')) {
             set_option('solr_search_hl_max_analyzed_chars', '51200');
         }
+
+        if (version_compare($args['old_version'], '2.3.0', '<=')) {
+            $sth = $this->_db->query("
+                SELECT * FROM {$this->_db->SolrSearchField}
+                WHERE element_id IS NOT NULL
+            ");
+            $fields = $sth->fetchAll();
+            $elementTable = $this->_db->getTable('Element');
+            foreach ($fields as $field) {
+                $element = $elementTable->find($field['element_id']);
+                if ($element) {
+                    $element_set = $element->getElementSet();
+                    $slug = Inflector::underscore($element->name . '_' . $element_set->name);
+                    $this->_db->query("
+                        UPDATE {$this->_db->SolrSearchField}
+                        SET slug = ?
+                        WHERE id = ?
+                    ", array($slug, $field['id']));
+                }
+            }
+        }
     }
 
 
@@ -207,7 +228,7 @@ SQL
     public function hookAfterSaveElement($args)
     {
         if ($args['insert']) {
-            $facet = new SolrSearchField($args['record']);
+            $facet = new SolrSearchField(null, $args['record']);
             $facet->save();
         }
     }

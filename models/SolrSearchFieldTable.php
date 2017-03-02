@@ -178,7 +178,7 @@ class SolrSearchFieldTable extends Omeka_Db_Table
 
         // Element-backed facets:
         foreach ($elements->findAll() as $element) {
-            $facet = new SolrSearchField($element);
+            $facet = new SolrSearchField(null, $element);
             $facet->save();
         }
 
@@ -218,7 +218,7 @@ class SolrSearchFieldTable extends Omeka_Db_Table
         $elementSet = array();
         foreach ($elementTable->findAll() as $element) {
             if (! array_key_exists($element->id, $facetSet)) {
-                $facet = new SolrSearchField($element);
+                $facet = new SolrSearchField(null, $element);
                 $facet->save();
             } else {
                 $elementSet[$element->id] = TRUE;

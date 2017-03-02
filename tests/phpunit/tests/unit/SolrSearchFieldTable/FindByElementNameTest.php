@@ -33,7 +33,7 @@ class SolrSearchFieldTableTest_FindByElementName
             'Dublin Core', 'Title'
         );
 
-        $field = new SolrSearchField($title);
+        $field = new SolrSearchField(null, $title);
         $field->save();
 
         $retrieved = $this->fieldTable->findByElementName(

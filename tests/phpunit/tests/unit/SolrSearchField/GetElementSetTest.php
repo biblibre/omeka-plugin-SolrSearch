@@ -26,7 +26,7 @@ class SolrSearchFieldTest_GetElementSet extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $facet = new SolrSearchField($title);
+        $facet = new SolrSearchField(null, $title);
 
         // Should return the parent element set.
         $this->assertEquals($dublinCore->id, $facet->getElementSet()->id);

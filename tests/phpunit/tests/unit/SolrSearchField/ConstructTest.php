@@ -23,7 +23,7 @@ class SolrSearchFieldTest_Construct extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $facet = new SolrSearchField($title);
+        $facet = new SolrSearchField(null, $title);
 
         // Should set `element_id`, `slug`, and `label`.
         $this->assertEquals($title->id, $facet->element_id);

@@ -24,7 +24,7 @@ class SolrSearchFieldTest_FacetKey extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $field = new SolrSearchField($title);
+        $field = new SolrSearchField(null, $title);
 
         // Should add the `_s` suffix.
         $this->assertEquals("{$title->id}_s", $field->facetKey());

@@ -43,10 +43,10 @@ class SolrSearchField extends Omeka_Record_AbstractRecord
      *
      * @param Element $element The parent element.
      */
-    public function __construct($element=null)
+    public function __construct($db = null, $element = null)
     {
 
-        parent::__construct();
+        parent::__construct($db);
 
         if (!is_null($element)) {
 
@@ -54,7 +54,8 @@ class SolrSearchField extends Omeka_Record_AbstractRecord
             $this->element_id = $element->id;
 
             // Element identifier.
-            $this->slug = $element->id;
+            $element_set = $element->getElementSet();
+            $this->slug = Inflector::underscore($element->name . '_' . $element_set->name);
 
             // Pubilc-facing label.
             $this->label = $element->name;

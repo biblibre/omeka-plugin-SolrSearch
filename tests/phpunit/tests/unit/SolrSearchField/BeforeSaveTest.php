@@ -24,7 +24,7 @@ class SolrSearchFieldTest_BeforeSave extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $this->facet = new SolrSearchField($title);
+        $this->facet = new SolrSearchField(null, $title);
 
     }
 

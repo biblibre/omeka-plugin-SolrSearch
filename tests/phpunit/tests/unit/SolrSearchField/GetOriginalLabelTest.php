@@ -49,7 +49,7 @@ class SolrSearchFieldTest_GetOriginalLabel extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $facet = new SolrSearchField($title);
+        $facet = new SolrSearchField(null, $title);
 
         // Should return the parent element.
         $this->assertEquals('Title', $facet->getOriginalLabel());

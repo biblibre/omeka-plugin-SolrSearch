@@ -32,7 +32,7 @@ class SolrSearchFieldTableTest_FindByElement extends SolrSearch_Case_Default
             'Dublin Core', 'Title'
         );
 
-        $field = new SolrSearchField($title);
+        $field = new SolrSearchField(null, $title);
         $field->save();
 
         $retrieved = $this->fieldTable->findByElement($title);

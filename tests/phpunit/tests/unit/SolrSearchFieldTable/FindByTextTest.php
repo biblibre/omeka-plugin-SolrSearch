@@ -33,7 +33,7 @@ class SolrSearchFieldTableTest_FindByText extends SolrSearch_Case_Default
         );
 
         // Create a field for "Title".
-        $field = new SolrSearchField($title);
+        $field = new SolrSearchField(null, $title);
         $field->save();
 
         // Get a "Title" element text.
