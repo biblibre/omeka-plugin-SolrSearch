@@ -73,6 +73,8 @@ class SolrSearch_ResultsController
 
         // Push results to the view.
         $this->view->results = $results;
+        $this->view->query = $this->_flatten($this->getRequest()->getQuery());
+        $this->view->sortOptions = $this->_getSortOptions();
 
     }
 
@@ -167,13 +169,48 @@ class SolrSearch_ResultsController
 
         );
 
-        $df = $this->_request->getParam('df');
-        if (isset($df)) {
-            $parameters['df'] = $df;
+        $urlParams = array('df', 'sort');
+        foreach ($urlParams as $urlParam) {
+            $param = $this->_request->getParam($urlParam);
+            if (isset($param)) {
+                $parameters[$urlParam] = $param;
+            }
         }
 
         return $parameters;
     }
 
+    protected function _getSortOptions()
+    {
+        $sortOptions = array(
+            '' => __('Relevance'),
+        );
+
+        $sortFields = $this->_fields->findBy(array('is_sort' => 1));
+        foreach ($sortFields as $sortField) {
+            $sortKey = $sortField->sortKey();
+            $element = $sortField->getElement();
+            $sortOptions[$sortKey . ' asc'] = __($element->name) . ' (A → Z)';
+            $sortOptions[$sortKey . ' desc'] = __($element->name) . ' (Z → A)';
+        }
+
+        return $sortOptions;
+    }
+
+    protected function _flatten($array, $parentKey = null)
+    {
+        $result = array();
+
+        foreach ($array as $key => $value) {
+          $newKey = $parentKey ? "{$parentKey}[$key]" : $key;
+          if (is_array($value)) {
+            $result = array_merge($result, flatten($value, $newKey));
+          } else {
+            $result[$newKey] = $value;
+          }
+        }
+
+        return $result;
+    }
 
 }

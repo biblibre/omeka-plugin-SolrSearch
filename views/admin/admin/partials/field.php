@@ -32,7 +32,7 @@
     />
   </td>
 
-  <?php foreach (array('is_indexed', 'is_facet') as $opt): ?>
+  <?php foreach (array('is_indexed', 'is_facet', 'is_sort') as $opt): ?>
     <td>
       <input
         name="facets[<?php echo $field->slug; ?>][<?php echo $opt; ?>]"

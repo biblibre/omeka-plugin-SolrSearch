@@ -95,7 +95,6 @@
   <?php endforeach; ?>
 </div>
 
-
 <!-- Results. -->
 <div id="solr-results">
 
@@ -103,6 +102,13 @@
   <h2 id="num-found">
     <?php echo $results->response->numFound; ?> results
   </h2>
+
+  <?php
+  echo $this->partial('results/sort.php', array(
+    'query' => $query,
+    'sortOptions' => $sortOptions,
+  ));
+  ?>
 
   <?php foreach ($results->response->docs as $doc): ?>
 

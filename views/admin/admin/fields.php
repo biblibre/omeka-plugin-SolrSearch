@@ -43,6 +43,7 @@
                 <th><?php echo __('Facet Label'); ?></th>
                 <th><?php echo __('Is Indexed?'); ?></th>
                 <th><?php echo __('Is Facet?'); ?></th>
+                <th><?php echo __('Is Sort?'); ?></th>
               </tr>
             </thead>
 

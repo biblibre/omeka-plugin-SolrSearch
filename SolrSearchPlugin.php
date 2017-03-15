@@ -115,6 +115,13 @@ SQL
                 }
             }
         }
+
+        if (version_compare($args['old_version'], '2.4.0', '<=')) {
+            $sth = $this->_db->query("
+                ALTER TABLE {$this->_db->SolrSearchField}
+                ADD COLUMN is_sort tinyint unsigned DEFAULT 0 AFTER is_facet
+            ");
+        }
     }
 
 
@@ -291,7 +298,6 @@ SQL
         }
     }
 
-
     /**
      * Add a link to the administrative navigation bar.
      *
@@ -334,6 +340,7 @@ SQL
             label       tinytext collate utf8_unicode_ci NOT NULL,
             is_indexed  tinyint unsigned DEFAULT 0,
             is_facet    tinyint unsigned DEFAULT 0,
+            is_sort     tinyint unsigned DEFAULT 0,
             PRIMARY KEY (id)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 SQL

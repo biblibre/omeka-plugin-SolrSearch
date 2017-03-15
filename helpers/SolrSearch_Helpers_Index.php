@@ -62,6 +62,10 @@ class SolrSearch_Helpers_Index
             if ($field->is_facet) {
                 $doc->setMultiValue($field->facetKey(), $text->text);
             }
+
+            if ($field->is_sort && $doc->getField($field->sortKey()) === false) {
+                $doc->setField($field->sortKey(), $text->text);
+            }
         }
     }
 

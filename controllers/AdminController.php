@@ -161,6 +161,7 @@ class SolrSearch_AdminController
                 // Were "Is Indexed?" and "Is Facet?" checked?
                 $indexed = array_key_exists('is_indexed', $data) ? 1 : 0;
                 $faceted = array_key_exists('is_facet', $data) ? 1 : 0;
+                $sorted  = array_key_exists('is_sort', $data) ? 1 : 0;
 
                 // Load the facet mapping.
                 $facet = $fieldTable->findBySlug($name);
@@ -169,6 +170,7 @@ class SolrSearch_AdminController
                 $facet->label       = $data['label'];
                 $facet->is_indexed  = $indexed;
                 $facet->is_facet    = $faceted;
+                $facet->is_sort     = $sorted;
                 $facet->save();
 
             }

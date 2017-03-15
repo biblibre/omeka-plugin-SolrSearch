@@ -37,6 +37,11 @@ class SolrSearchField extends Omeka_Record_AbstractRecord
      */
     public $is_facet;
 
+    /**
+     * Sort status [boolean/tinyint].
+     */
+    public $is_sort;
+
 
     /**
      * Set the parent element reference.
@@ -86,6 +91,10 @@ class SolrSearchField extends Omeka_Record_AbstractRecord
         return $this->hasElement() ? "{$this->slug}_s" : $this->slug;
     }
 
+    public function sortKey()
+    {
+        return $this->hasElement() ? "{$this->slug}_ss" : $this->slug;
+    }
 
     /**
      * Is the field associated with a metadata element?
