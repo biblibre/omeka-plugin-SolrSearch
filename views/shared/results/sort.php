@@ -7,7 +7,7 @@
         <?php endforeach; ?>
 
         <label>
-            Sort by
+            <?php echo __('Sort by'); ?>
             <?php echo $this->formSelect('sort', $query['sort'], null, $sortOptions); ?>
         </label>
         <button type="submit"><?php echo __('Sort'); ?></button>
