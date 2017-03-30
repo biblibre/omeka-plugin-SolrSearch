@@ -1,0 +1,279 @@
+# Translation for the SolrSearch Omeka plugin.
+# Julian Maurice <julian.maurice@biblibre.com>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: SolrSearch\n"
+"Report-Msgid-Bugs-To: http://github.com/scholarslab/SolrSearch/issues\n"
+"POT-Creation-Date: 2012-05-24 14:30-0500\n"
+"PO-Revision-Date: 2017-03-30 09:29+0200\n"
+"Last-Translator: Julian Maurice <julian.maurice@biblibre.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. //www.apache.org/licenses/LICENSE-2.0.html
+#.
+#: SolrSearchPlugin.php:310 views/shared/results/index.php:14
+msgid "Solr Search"
+msgstr "Recherche Solr"
+
+#: models/SolrSearchField.php:141
+msgid "Omeka Categories"
+msgstr "Catégories Omeka"
+
+#: models/SolrSearchField.php:155 models/SolrSearchFieldTable.php:173
+msgid "Tag"
+msgstr "Étiquette"
+
+#: models/SolrSearchField.php:158 models/SolrSearchFieldTable.php:176
+msgid "Result Type"
+msgstr "Type de résultat"
+
+#: controllers/AdminController.php:39
+msgid "Solr connection is valid."
+msgstr "La connection Solr est valide."
+
+#: controllers/AdminController.php:46
+msgid "Solr connection is invalid."
+msgstr "La connection Solr est invalide."
+
+#: controllers/AdminController.php:180
+msgid "Fields successfully updated! Be sure to reindex."
+msgstr "Champs mis à jour avec succès! Assurez-vous de réindexer."
+
+#: controllers/AdminController.php:210
+msgid "Highlighting options successfully saved!"
+msgstr "Options de surbrillance enregistrées avec succès!"
+
+#: controllers/AdminController.php:240
+msgid "Reindexing started."
+msgstr "Réindexation démarrée"
+
+#: controllers/ResultsController.php:186
+msgid "Relevance"
+msgstr "Pertinence"
+
+#: views/admin/admin/results.php:13
+msgid "Solr Search | Results Configuration"
+msgstr "Recherche Solr | Configuration des résultats"
+
+#: views/admin/admin/results.php:21
+msgid "Results Configuration"
+msgstr "Configuration des résultats"
+
+#: views/admin/admin/reindex.php:13
+msgid "Solr Search | Index Items"
+msgstr "Recherche Solr | Indexation des contenus"
+
+#: views/admin/admin/reindex.php:21
+msgid "Index Items"
+msgstr "Indexation des contenus"
+
+#: views/admin/admin/reindex.php:23
+msgid "Click the button to (re)index the entire site."
+msgstr "Cliquez sur le bouton pour (ré)indexer tout le site."
+
+#: views/admin/admin/partials/navigation.php:14
+msgid "Server"
+msgstr "Serveur"
+
+#: views/admin/admin/partials/navigation.php:16
+msgid "Fields"
+msgstr "Champs"
+
+#: views/admin/admin/partials/navigation.php:17
+msgid "Results"
+msgstr "Résultats"
+
+#: views/admin/admin/partials/navigation.php:18
+msgid "Index"
+msgstr "Index"
+
+#: views/admin/admin/server.php:13
+msgid "Solr Search | Server Configuration"
+msgstr "Recherche Solr | Configuration du serveur"
+
+#: views/admin/admin/server.php:21
+msgid "Server Configuration"
+msgstr "Configuration du serveur"
+
+#: views/admin/admin/collections.php:17
+msgid "Solr Search | Collection Configuration"
+msgstr "Recherche Solr | Configuration des collections"
+
+#: views/admin/admin/fields.php:16
+msgid "Solr Search | Field Configuration"
+msgstr "Recherche Solr | Configuration des champs"
+
+#: views/admin/admin/fields.php:27
+msgid "Field Configuration"
+msgstr "Configuration des champs"
+
+#: views/admin/admin/fields.php:42
+msgid "Field"
+msgstr "Champ"
+
+#: views/admin/admin/fields.php:43
+msgid "Facet Label"
+msgstr "Label de la facette"
+
+#: views/admin/admin/fields.php:44
+msgid "Is Indexed?"
+msgstr "Est indexé ?"
+
+#: views/admin/admin/fields.php:45
+msgid "Is Facet?"
+msgstr "Est une facette ?"
+
+#: views/admin/admin/fields.php:46
+msgid "Is Sort?"
+msgstr "Est triable ?"
+
+#: views/admin/admin/fields.php:66
+msgid "Update Search Fields"
+msgstr "Mettre à jour les champs de recherche"
+
+#. //www.apache.org/licenses/LICENSE-2.0.html
+#.
+#: views/shared/results/sort.php:10
+msgid "Sort by"
+msgstr "Trier par"
+
+#: views/shared/results/sort.php:13
+msgid "Sort"
+msgstr "Tri"
+
+#: views/shared/results/index.php:17
+msgid "Search the Collection"
+msgstr "Chercher dans la collection"
+
+#: views/shared/results/index.php:25
+msgid "Search keywords"
+msgstr "Recherche par mots-clés"
+
+#: views/shared/results/index.php:62
+msgid "Limit your search"
+msgstr "Limiter la recherche"
+
+#: views/shared/results/index.php:128
+msgid "Untitled"
+msgstr "Sans titre"
+
+#: forms/SolrSearch_Form_Results.php:25
+msgid "Enable Highlighting"
+msgstr "Activer la surbrillance"
+
+#: forms/SolrSearch_Form_Results.php:26
+msgid "Display snippets with highlighted term matches."
+msgstr "Afficher des extraits avec des mots-clés en surbrillance."
+
+#: forms/SolrSearch_Form_Results.php:32
+msgid "Number of Snippets"
+msgstr "Nombre d'extraits"
+
+#: forms/SolrSearch_Form_Results.php:33
+msgid "The maximum number of snippets to display."
+msgstr "Le nombre maximum d'extraits à afficher"
+
+#: forms/SolrSearch_Form_Results.php:41 forms/SolrSearch_Form_Results.php:59
+#: forms/SolrSearch_Form_Results.php:79 forms/SolrSearch_Form_Results.php:105
+#: forms/SolrSearch_Form_Server.php:43
+msgid "Must be an integer."
+msgstr "Doit être un entier"
+
+#: forms/SolrSearch_Form_Results.php:50
+msgid "Snippet Length"
+msgstr "Longueur de l'extrait"
+
+#: forms/SolrSearch_Form_Results.php:51
+msgid "The maximum number of characters to display in a snippet."
+msgstr "Le nombre maximum de caractères à afficher pour chaque extrait"
+
+#: forms/SolrSearch_Form_Results.php:68
+msgid "Extent of Document Highlightable"
+msgstr "Étendue du document susceptible d'être mis en surbrillance"
+
+#: forms/SolrSearch_Form_Results.php:69
+msgid ""
+"How much of the document can be highlighted, in characters. Occurrences past "
+"this point will not be returned in the results highlighting."
+msgstr ""
+"Quelle portion du document peut être mis en surbrillance, en nombre de "
+"caractères. Passé ce point, les occurrences ne seront pas affichées dans les "
+"résultats."
+
+#: forms/SolrSearch_Form_Results.php:88
+msgid "Facet Ordering"
+msgstr "Tri des facettes"
+
+#: forms/SolrSearch_Form_Results.php:89
+msgid "The sorting criteria for result facets."
+msgstr "Le critère de tri pour les facettes"
+
+#: forms/SolrSearch_Form_Results.php:90
+msgid "Occurrences"
+msgstr "Occurrences"
+
+#: forms/SolrSearch_Form_Results.php:96
+msgid "Facet Count"
+msgstr "Nombre de facettes"
+
+#: forms/SolrSearch_Form_Results.php:97
+msgid "The maximum number of facets to display."
+msgstr "Le nombre maximum de facettes à afficher."
+
+#: forms/SolrSearch_Form_Results.php:114
+msgid "Display private items"
+msgstr "Afficher les contenus privés"
+
+#: forms/SolrSearch_Form_Results.php:115
+msgid ""
+"Display private items for all user roles with sufficient permission to view "
+"them."
+msgstr ""
+"Afficher les contenus privés pour tous les rôles utilisateurs avec les "
+"permissions suffisantes pour les voir."
+
+#: forms/SolrSearch_Form_Results.php:122 forms/SolrSearch_Form_Server.php:71
+msgid "Save Settings"
+msgstr "Enregistrer les paramètres"
+
+#: forms/SolrSearch_Form_Reindex.php:23
+msgid "Clear index"
+msgstr "Nettoyer l'index"
+
+#: forms/SolrSearch_Form_Reindex.php:27
+msgid "Reindex"
+msgstr "Réindexer"
+
+#: forms/SolrSearch_Form_Server.php:25
+msgid "Server Host"
+msgstr "Nom d'hôte du serveur"
+
+#: forms/SolrSearch_Form_Server.php:26
+msgid "The location of the Solr server."
+msgstr "L'emplacement du serveur Solr."
+
+#: forms/SolrSearch_Form_Server.php:34
+msgid "Server Port"
+msgstr "Port du serveur"
+
+#: forms/SolrSearch_Form_Server.php:35
+msgid "The port that Solr is listening on."
+msgstr "Le port sur lequel Solr écoute"
+
+#: forms/SolrSearch_Form_Server.php:52
+msgid "Core URL"
+msgstr "URL du coeur"
+
+#: forms/SolrSearch_Form_Server.php:53
+msgid "The URL of the Solr core to index against."
+msgstr "L'URL du coeur Solr à utiliser."
+
+#: forms/SolrSearch_Form_Server.php:62
+msgid "Invalid core URL."
+msgstr "URL du coeur invalide."
