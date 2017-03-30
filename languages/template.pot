@@ -15,208 +15,260 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: SolrSearchPlugin.php:233
-msgid "Solr Options"
+#. //www.apache.org/licenses/LICENSE-2.0.html
+#.
+#: SolrSearchPlugin.php:310 views/shared/results/index.php:14
+msgid "Solr Search"
 msgstr ""
 
-#: SolrSearchPlugin.php:255
-msgid ""
-"Cannot connect to Solr with the given configuration. Please check your "
-"server host, port, and core."
-msgstr ""
-
-#: SolrSearchPlugin.php:328 models/SolrSearchField.php:84
-msgid "Tag"
-msgstr ""
-
-#: SolrSearchPlugin.php:331 models/SolrSearchField.php:87
-msgid "Result Type"
-msgstr ""
-
-#: SolrSearchPlugin.php:387
-msgid "ACL not available"
-msgstr ""
-
-#: controllers/ConfigController.php:56
-msgid "Solr configuration updated. Be sure to reindex."
-msgstr ""
-
-#: controllers/HighlightController.php:46
-msgid "Hit highlighting features modified."
-msgstr ""
-
-#: controllers/HighlightController.php:48
-msgid "Failed to gather posted data."
-msgstr ""
-
-#: controllers/HighlightController.php:69
-msgid "Highlighting:"
-msgstr ""
-
-#: controllers/HighlightController.php:70
-msgid "Enable/Disable highlighting matches in Solr fields"
-msgstr ""
-
-#: controllers/HighlightController.php:71
-msgid "True"
-msgstr ""
-
-#: controllers/HighlightController.php:72
-msgid "False"
-msgstr ""
-
-#: controllers/HighlightController.php:78
-msgid "Snippets:"
-msgstr ""
-
-#: controllers/HighlightController.php:79
-msgid "The maximum number of highlighted snippets to generate"
-msgstr ""
-
-#: controllers/HighlightController.php:87
-msgid "Snippet Size:"
-msgstr ""
-
-#: controllers/HighlightController.php:88
-msgid "The maximum number of characters to display in a snippet"
-msgstr ""
-
-#: controllers/ReindexController.php:32
-msgid "Reindex process started."
-msgstr ""
-
-#: controllers/ReindexController.php:52
-msgid "Clear & Reindex"
-msgstr ""
-
-#: forms/FacetForm.php:99
-msgid "Update Search Fields"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_Query.php:121
-msgid "ALL TERMS"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_Query.php:132
-#, php-format
-msgid "Remove constraint %s"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:143
-msgid "Untitled"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:326
-msgid "Server Host:"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:329
-msgid "Server Port:"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:333
-msgid "Solr Core Name:"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:345
-msgid "Facet Field Constraint Order:"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:349
-msgid "Occurrences"
-msgstr ""
-
-#: helpers/SolrSearch_Helpers_View.php:352
-msgid "Maximum Facet Count:"
-msgstr ""
-
-#: models/SolrSearchFieldTable.php:29
+#: models/SolrSearchField.php:141
 msgid "Omeka Categories"
 msgstr ""
 
-#: views/admin/config/index.php:17
-msgid "Solr Search Configuration"
+#: models/SolrSearchField.php:155 models/SolrSearchFieldTable.php:173
+msgid "Tag"
 msgstr ""
 
-#: views/admin/config/index.php:22
-msgid "Configure SolrSearch Indexing"
+#: models/SolrSearchField.php:158 models/SolrSearchFieldTable.php:176
+msgid "Result Type"
 msgstr ""
 
-#: views/admin/config/index.php:26 views/admin/highlight/index.php:8
-#: views/admin/reindex/index.php:9
-msgid "Field Configuration"
+#: controllers/AdminController.php:39
+msgid "Solr connection is valid."
 msgstr ""
 
-#: views/admin/config/index.php:29 views/admin/highlight/index.php:11
-#: views/admin/reindex/index.php:12
-msgid "Hit Highlighting Options"
+#: controllers/AdminController.php:46
+msgid "Solr connection is invalid."
 msgstr ""
 
-#: views/admin/config/index.php:32 views/admin/highlight/index.php:14
-#: views/admin/reindex/index.php:15
+#: controllers/AdminController.php:180
+msgid "Fields successfully updated! Be sure to reindex."
+msgstr ""
+
+#: controllers/AdminController.php:210
+msgid "Highlighting options successfully saved!"
+msgstr ""
+
+#: controllers/AdminController.php:240
+msgid "Reindexing started."
+msgstr ""
+
+#: controllers/ResultsController.php:186
+msgid "Relevance"
+msgstr ""
+
+#: views/admin/admin/results.php:13
+msgid "Solr Search | Results Configuration"
+msgstr ""
+
+#: views/admin/admin/results.php:21
+msgid "Results Configuration"
+msgstr ""
+
+#: views/admin/admin/reindex.php:13
+msgid "Solr Search | Index Items"
+msgstr ""
+
+#: views/admin/admin/reindex.php:21
 msgid "Index Items"
 msgstr ""
 
-#: views/admin/config/index.php:38
-msgid "Configure Search Fields"
+#: views/admin/admin/reindex.php:23
+msgid "Click the button to (re)index the entire site."
 msgstr ""
 
-#: views/admin/config/index.php:53
-msgid "Is Searchable"
+#: views/admin/admin/partials/navigation.php:14
+msgid "Server"
 msgstr ""
 
-#: views/admin/config/index.php:54
-msgid "Is Facet"
+#: views/admin/admin/partials/navigation.php:16
+msgid "Fields"
 msgstr ""
 
-#: views/admin/config/index.php:56
+#: views/admin/admin/partials/navigation.php:17
+msgid "Results"
+msgstr ""
+
+#: views/admin/admin/partials/navigation.php:18
+msgid "Index"
+msgstr ""
+
+#: views/admin/admin/server.php:13
+msgid "Solr Search | Server Configuration"
+msgstr ""
+
+#: views/admin/admin/server.php:21
+msgid "Server Configuration"
+msgstr ""
+
+#: views/admin/admin/collections.php:17
+msgid "Solr Search | Collection Configuration"
+msgstr ""
+
+#: views/admin/admin/fields.php:16
+msgid "Solr Search | Field Configuration"
+msgstr ""
+
+#: views/admin/admin/fields.php:27
+msgid "Field Configuration"
+msgstr ""
+
+#: views/admin/admin/fields.php:42
 msgid "Field"
 msgstr ""
 
-#: views/admin/config/update.php:2 views/admin/reindex/update.php:2
-msgid "Solr Search Facets"
+#: views/admin/admin/fields.php:43
+msgid "Facet Label"
 msgstr ""
 
-#: views/admin/config/update.php:4 views/admin/reindex/update.php:4
-msgid "Manage Solr Search Facets"
+#: views/admin/admin/fields.php:44
+msgid "Is Indexed?"
 msgstr ""
 
-#: views/admin/config/update.php:13 views/admin/highlight/update.php:13
-#: views/admin/reindex/update.php:13
-msgid "Return to form."
+#: views/admin/admin/fields.php:45
+msgid "Is Facet?"
 msgstr ""
 
-#: views/admin/highlight/index.php:2 views/admin/highlight/update.php:2
-msgid "Solr Search Hit Highlighting Options"
+#: views/admin/admin/fields.php:46
+msgid "Is Sort?"
 msgstr ""
 
-#: views/admin/highlight/index.php:4 views/admin/reindex/index.php:5
-msgid "Configure Solr"
+#: views/admin/admin/fields.php:66
+msgid "Update Search Fields"
 msgstr ""
 
-#: views/admin/highlight/index.php:18 views/admin/highlight/update.php:4
-msgid "Hit Highlighting"
+#. //www.apache.org/licenses/LICENSE-2.0.html
+#.
+#: views/shared/results/sort.php:10
+msgid "Sort by"
 msgstr ""
 
-#: views/admin/highlight/index.php:24
-msgid "Select hit highlighting options from available fields below."
+#: views/shared/results/sort.php:13
+msgid "Sort"
 msgstr ""
 
-#: views/admin/reindex/index.php:2
-msgid "Reindex Items in Solr"
+#: views/shared/results/index.php:17
+msgid "Search the Collection"
 msgstr ""
 
-#: views/admin/reindex/index.php:19
-msgid "Reindex All Items"
+#: views/shared/results/index.php:25
+msgid "Search keywords"
 msgstr ""
 
-#: views/admin/reindex/index.php:27
+#: views/shared/results/index.php:62
+msgid "Limit your search"
+msgstr ""
+
+#: views/shared/results/index.php:128
+msgid "Untitled"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:25
+msgid "Enable Highlighting"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:26
+msgid "Display snippets with highlighted term matches."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:32
+msgid "Number of Snippets"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:33
+msgid "The maximum number of snippets to display."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:41 forms/SolrSearch_Form_Results.php:59
+#: forms/SolrSearch_Form_Results.php:79 forms/SolrSearch_Form_Results.php:105
+#: forms/SolrSearch_Form_Server.php:43
+msgid "Must be an integer."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:50
+msgid "Snippet Length"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:51
+msgid "The maximum number of characters to display in a snippet."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:68
+msgid "Extent of Document Highlightable"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:69
 msgid ""
-"Click the button below to reindex all of your public items into the Solr "
-"index."
+"How much of the document can be highlighted, in characters. Occurrences past "
+"this point will not be returned in the results highlighting."
 msgstr ""
 
-#: views/shared/results/index.php:46
-#, php-format
-msgid "%s results"
+#: forms/SolrSearch_Form_Results.php:88
+msgid "Facet Ordering"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:89
+msgid "The sorting criteria for result facets."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:90
+msgid "Occurrences"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:96
+msgid "Facet Count"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:97
+msgid "The maximum number of facets to display."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:114
+msgid "Display private items"
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:115
+msgid ""
+"Display private items for all user roles with sufficient permission to view "
+"them."
+msgstr ""
+
+#: forms/SolrSearch_Form_Results.php:122 forms/SolrSearch_Form_Server.php:71
+msgid "Save Settings"
+msgstr ""
+
+#: forms/SolrSearch_Form_Reindex.php:23
+msgid "Clear index"
+msgstr ""
+
+#: forms/SolrSearch_Form_Reindex.php:27
+msgid "Reindex"
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:25
+msgid "Server Host"
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:26
+msgid "The location of the Solr server."
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:34
+msgid "Server Port"
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:35
+msgid "The port that Solr is listening on."
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:52
+msgid "Core URL"
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:53
+msgid "The URL of the Solr core to index against."
+msgstr ""
+
+#: forms/SolrSearch_Form_Server.php:62
+msgid "Invalid core URL."
 msgstr ""
