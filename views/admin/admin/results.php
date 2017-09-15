@@ -9,6 +9,7 @@
 
 ?>
 
+<?php queue_js_file('vendor/tiny_mce/tiny_mce'); ?>
 <?php echo head(array(
   'title' => __('Solr Search | Results Configuration')
 )); ?>
@@ -22,5 +23,11 @@
 	<?php echo flash(); ?>
 	<?php echo $form; ?>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Omeka.wysiwyg();
+    });
+</script>
 
 <?php echo foot(); ?>

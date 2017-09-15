@@ -7,8 +7,11 @@
         <?php endforeach; ?>
 
         <label>
-            <?php echo __('Sort by'); ?>
-            <?php echo $this->formSelect('sort', $query['sort'], null, $sortOptions); ?>
+            <?php
+            echo __('Sort by');
+            $sort = isset($query['sort']) ? $query['sort'] : null;
+            echo $this->formSelect('sort', $sort, null, $sortOptions);
+            ?>
         </label>
         <button type="submit"><?php echo __('Sort'); ?></button>
     </form>

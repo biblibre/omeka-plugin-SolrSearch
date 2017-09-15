@@ -97,71 +97,79 @@
 
 <!-- Results. -->
 <div id="solr-results">
-
-  <!-- Number found. -->
-  <h2 id="num-found">
-    <?php echo $results->response->numFound; ?> results
-  </h2>
-
-  <?php
-  echo $this->partial('results/sort.php', array(
-    'query' => $query,
-    'sortOptions' => $sortOptions,
-  ));
-  ?>
-
-  <?php foreach ($results->response->docs as $doc): ?>
-
-    <!-- Document. -->
-    <div class="result">
-
-      <!-- Header. -->
-      <div class="result-header">
-
-        <!-- Record URL. -->
-        <?php $url = SolrSearch_Helpers_View::getDocumentUrl($doc); ?>
-
-        <!-- Title. -->
-        <a href="<?php echo $url; ?>" class="result-title"><?php
-                $title = is_array($doc->title) ? $doc->title[0] : $doc->title;
-                if (empty($title)) {
-                    $title = '<i>' . __('Untitled') . '</i>';
-                }
-                echo $title;
-            ?></a>
-
-        <!-- Result type. -->
-        <span class="result-type">(<?php echo $doc->resulttype; ?>)</span>
-
-      </div>
-
-      <!-- Highlighting. -->
-      <?php if (get_option('solr_search_hl')): ?>
-        <ul class="hl">
-          <?php foreach($results->highlighting->{$doc->id} as $field): ?>
-            <?php foreach($field as $hl): ?>
-              <li class="snippet"><?php echo strip_tags($hl, '<em>'); ?></li>
-            <?php endforeach; ?>
-          <?php endforeach; ?>
-        </ul>
-      <?php endif; ?>
+    <?php $numFound = $results->response->numFound; ?>
+    <?php if ($numFound > 0): ?>
+      <!-- Number found. -->
+      <h2 id="num-found">
+        <?php echo $results->response->numFound; ?> results
+      </h2>
 
       <?php
-        $item = get_db()->getTable($doc->model)->find($doc->modelid);
-        echo item_image_gallery(
-            array('wrapper' => array('class' => 'gallery')),
-            'square_thumbnail',
-            false,
-            $item
-        );
+      echo $this->partial('results/sort.php', array(
+        'query' => $query,
+        'sortOptions' => $sortOptions,
+      ));
       ?>
 
-    </div>
+      <?php foreach ($results->response->docs as $doc): ?>
 
-  <?php endforeach; ?>
+        <!-- Document. -->
+        <div class="result">
 
+          <!-- Header. -->
+          <div class="result-header">
+
+            <!-- Record URL. -->
+            <?php $url = SolrSearch_Helpers_View::getDocumentUrl($doc); ?>
+
+            <!-- Title. -->
+            <a href="<?php echo $url; ?>" class="result-title"><?php
+                    $title = is_array($doc->title) ? $doc->title[0] : $doc->title;
+                    if (empty($title)) {
+                        $title = '<i>' . __('Untitled') . '</i>';
+                    }
+                    echo $title;
+                ?></a>
+
+            <!-- Result type. -->
+            <span class="result-type">(<?php echo $doc->resulttype; ?>)</span>
+
+          </div>
+
+          <!-- Highlighting. -->
+          <?php if (get_option('solr_search_hl')): ?>
+            <ul class="hl">
+              <?php foreach($results->highlighting->{$doc->id} as $field): ?>
+                <?php foreach($field as $hl): ?>
+                  <li class="snippet"><?php echo strip_tags($hl, '<em>'); ?></li>
+                <?php endforeach; ?>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
+
+          <?php
+            $item = get_db()->getTable($doc->model)->find($doc->modelid);
+            echo item_image_gallery(
+                array('wrapper' => array('class' => 'gallery')),
+                'square_thumbnail',
+                false,
+                $item
+            );
+          ?>
+
+        </div>
+
+      <?php endforeach; ?>
+    <?php else: ?>
+        <?php $no_results_text = get_option('solr_search_no_results_text'); ?>
+        <?php if (!empty($no_results_text)): ?>
+            <?php echo $no_results_text; ?>
+        <?php else: ?>
+            <?php echo __('No results found'); ?>
+        <?php endif; ?>
+    <?php endif; ?>
 </div>
 
 
-<?php echo pagination_links(); ?>
+    <?php echo pagination_links(); ?>
 <?php echo foot();

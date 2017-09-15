@@ -116,6 +116,11 @@ class SolrSearch_Form_Results extends Omeka_Form
             'value'         => get_option('solr_search_display_private_items')
         ));
 
+        $this->addElement('textarea', 'solr_search_no_results_text', array(
+            'label' => __('Text if no results'),
+            'description' => __('The text that will be displayed if the search returns no result'),
+            'value' => get_option('solr_search_no_results_text'),
+        ));
 
         // Submit:
         $this->addElement('submit', 'submit', array(
@@ -128,7 +133,8 @@ class SolrSearch_Form_Results extends Omeka_Form
             'solr_search_hl_fragsize',
             'solr_search_facet_sort',
             'solr_search_facet_limit',
-            'solr_search_display_private_items'
+            'solr_search_display_private_items',
+            'solr_search_no_results_text',
         ), 'fields');
 
         $this->addDisplayGroup(array(
